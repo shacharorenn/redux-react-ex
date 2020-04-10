@@ -1,25 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Register from './components/Register';
+import ChatList from './components/ChatList';
+import CreateMessage from './components/CreateMessage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  <div className="App">
+    <div className="container">
+      <h1>Redux stupid chat</h1>
+      <div className="row">
+        <div className="col-6">
+          <Register/>
+        </div>
+        <div className="col-6">
+          <Register/>
+        </div>          
+        <ChatList/>
+        <ChatList/>
+        <div className="col-6">
+          <CreateMessage/>
+        </div>
+        <div className="col-6">
+          <CreateMessage/>
+        </div>
+      </div>
     </div>
+  </div>
   );
 }
 
