@@ -1,11 +1,11 @@
 import React from 'react';
 import {Formik, Form, Field} from 'formik';
+import UserService from '../services/users.service'
 
-export default function Register() {
-
-    const handleSubmit = (values) => {
-        console.log(values);
-        //cb(values.name);
+export default ({cb})=>{
+    const handleSubmit = async(values) => {
+        const user = await UserService.createUser(values);
+        cb(user);
     }
 
     return (
@@ -17,6 +17,7 @@ export default function Register() {
                 () => (
                     <Form>
                         <div className="form-group">
+                            <label>First name</label>
                             <Field
                                 className="form-control"
                                 type="text"
@@ -25,6 +26,7 @@ export default function Register() {
                             />
                         </div>
                         <div className="form-group">
+                         <label>Last name</label>
                             <Field
                                 className="form-control"
                                 type="text"
