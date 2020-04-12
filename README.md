@@ -9,3 +9,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 > npm install react-redux --save
 > npm install redux-thunk       
 > npm install redux react-redux --save
+> npm install axios
+> npm install lodash --save
